@@ -56,6 +56,8 @@
 #
 #
 # Gui.addWorkbench(SearchBar())
+import importlib
+
 import FreeCADGui
 from PySide import QtGui
 
@@ -73,16 +75,16 @@ def addToolSearchBox():
     if mw:
         if sea is None:
             sea = SearchBoxLight.SearchBoxLight(
-                getItemGroups=lambda: __import__("GetItemGroups").getItemGroups(),
-                getToolTip=lambda groupId, setParent: __import__(
-                    "GetItemGroups"
+                getItemGroups=lambda: importlib.import_module("freecad.search_bar.GetItemGroups").getItemGroups(),
+                getToolTip=lambda groupId, setParent: importlib.import_module(
+                    "freecad.search_bar.GetItemGroups"
                 ).getToolTip(groupId, setParent),
-                getItemDelegate=lambda: __import__(
-                    "IndentedItemDelegate"
+                getItemDelegate=lambda: importlib.import_module(
+                    "freecad.search_bar.IndentedItemDelegate"
                 ).IndentedItemDelegate(),
             )
             sea.resultSelected.connect(
-                lambda index, groupId: __import__("GetItemGroups").onResultSelected(
+                lambda index, groupId: importlib.import_module("freecad.search_bar.GetItemGroups").onResultSelected(
                     index, groupId
                 )
             )

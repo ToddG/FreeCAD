@@ -14,6 +14,7 @@ def onResultSelected(index, groupId):
         SearchResults.actionHandlers[handlerName](nfo)
     else:
         from PySide import QtGui
+        print(f"handlername note found: {handlerName}, SearchResults.actionHandlers: {SearchResults.actionHandlers}")
 
         QtGui.QMessageBox.warning(
             None,
@@ -30,6 +31,7 @@ def getToolTip(groupId, setParent):
     if handlerName in SearchResults.toolTipHandlers:
         return SearchResults.toolTipHandlers[handlerName](nfo, setParent)
     else:
+        print(f"handlerName note found: {handlerName}, SearchResults.toolTipHandlers: {SearchResults.toolTipHandlers}")
         return (
             "Could not load tooltip for this tool, it could be from a Mod that has been uninstalled. "
             "Try refreshing the list of tools."

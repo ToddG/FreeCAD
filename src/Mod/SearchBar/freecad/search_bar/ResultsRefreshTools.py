@@ -1,13 +1,11 @@
 import os
-
 from PySide import QtGui
-
 from freecad.search_bar import Serialize
 
 
 def refreshToolsAction(nfo):
+    print("ResultsRefreshTools: refreshToolsAction")
     from freecad.search_bar import RefreshTools
-
     RefreshTools.refreshToolsAction()
 
 

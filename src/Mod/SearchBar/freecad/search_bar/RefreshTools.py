@@ -85,8 +85,7 @@ def refreshToolbars(doLoadAllWorkbenches=True):
 
 def refreshToolsAction():
     from PySide import QtGui
-
-    print("Refresh list of tools")
+    print("RefreshTools: refreshToolsAction")
     fw = QtGui.QApplication.focusWidget()
     if fw is not None:
         fw.clearFocus()

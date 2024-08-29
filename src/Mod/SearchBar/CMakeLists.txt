@@ -21,9 +21,7 @@ set(Namespace_SRCS
     freecad/search_bar/SearchResults.py
     freecad/search_bar/Serialize.py
     freecad/search_bar/Tango-System-search.svg
-    freecad/search_bar/Tango-System-search.svg.url
     freecad/search_bar/Tango-Tools-spanner-hammer.svg
-    freecad/search_bar/Tango-Tools-spanner-hammer.svg.url
 )
 
 

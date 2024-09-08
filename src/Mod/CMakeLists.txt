@@ -147,3 +147,7 @@ endif(BUILD_WEB)
 if(BUILD_SEARCHBAR)
     add_subdirectory(SearchBar)
 endif(BUILD_SEARCHBAR)
+
+if(BUILD_SEARCHBARTWO)
+    add_subdirectory(SearchBarTwo)
+endif(BUILD_SEARCHBARTWO)

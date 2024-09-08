@@ -142,6 +142,7 @@ macro(InitializeFreeCADBuildOptions)
     option(BUILD_CLOUD "Build the FreeCAD cloud module" OFF)
     option(ENABLE_DEVELOPER_TESTS "Build the FreeCAD unit tests suit" ON)
     option(BUILD_SEARCHBAR "Build the FreeCAD SearchBar module" ON)
+    option(BUILD_SEARCHBARTWO "Build the FreeCAD SearchBarTwo module" ON)
 
 
     if(MSVC)
